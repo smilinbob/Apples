@@ -1,0 +1,143 @@
+Apples v1.0 by SmilinBob
+
+------------------------------
+------------------------------
+- Contents                   -
+-                            -
+-   Gameplay                 -
+-    Installation and setup  -
+-    Commands                -
+------------------------------
+------------------------------
+
+----------------------------------
+-------------Gameplay-------------
+----------------------------------
+
+  Apples is an adaptation of the card game Apples to Apples, and gameplay is quite similar.
+  At the begining of the game(or when a player joins, they are dealt 7 red cards. The red cards
+  are often nouns, but can also be a concept or idea. At the begining of each round a judge is 
+  selected then a green cardis drawn. The green cards are adjectives. Each player must then play
+  one of their green cards that represents the green card. Once all cards are recieved, or time 
+  runs out, the red cards are revealed. The judge must then pick one of the green cards they
+  like best. The judge may use any criteria to decide. They may choose the most true, or maybe
+  the one they think is funniest. The player that played that red card recieves the green card and
+  a point. The remaining red cards played are removed from the game, and play continues onto the 
+  next round.
+  
+  At the begining of each round, the bot will message each player their list of red cards and the 
+  green card for the round. To seect a card, the player simply messages the card number back to
+  the bot.
+  
+  When all cards are submitted, the red cards will be revealed in the channel, as well as messaged 
+  to the judge. The judge may make their selection either by saying the number of the card in the 
+  channel, or by messaging it to the bot.
+  
+  Please see Commands section for more information on game functions.
+
+----------------------------------
+------Installation and Setup------
+----------------------------------
+
+  Installation:
+    1. Place the entire folder in your mirc folder.
+    2. Open mirc and run the following command:
+	     /load -rs apples\apples.mrc
+	3. Click yes when asked: "Do you want to run initilizations commands?"
+  Setup:
+    If you are loading Apples for the first time, the config dialog will open automatically;
+	otherwise, you can access it through the popup menu on channel or status windows.
+	
+	First you will need to select a server. The server must be in mirc's server list, which
+	can be found in the main options menu. When the server is added, the default options will be
+	loaded.
+	
+  Settings:
+   
+    Server 				This is the list of servers that are currently configured for apples. To add or remove 
+						servers from the list, click 'Edit'. For a server to appear in the list, it must be 
+						added to your mirc server list. Each must have it's own unique group name. To add a 
+						server to the mirc server list, open the mirc options menu with alt+o or by clicking the
+						hammer icon at the top of the mirc window.
+  
+    Channel				The channel that the Apples game will run in. This will also be the only channel
+						that Apples commands will work in. Right now, only one channel per netowrk is supported.
+					
+	Round Time			Time(in seconds) players will have to submit a card and vote.
+	
+	Join Time			Time(in seconds) players have to join before the first round starts.
+						If less than 3 players have joined by this time, the game will be aborted.
+					
+	Drop Time			Time(in seconds) a player is given before they are dropped from the game.
+						(Please see Commands section for more information)
+					
+	Connect on start	The bot will automaticaly connect to the server and join the channel.
+	
+	Allow extra cards	Allows the addition of extra cards to the game. Card are unique toe ach network. 
+						Card lists are loaded only when necessary and cards added to the list may not be
+						seen for several games. (Please see Commands section for more information)
+						
+	Mods only			Only Game mods will be allowed to add cards. 
+	
+	Mod List			Opens the Mod List dialog, allowing you to edit the list of Game Mods on the network.
+						Mods are given access to several additional commands.
+						(Please see Commands Section for more information)
+						
+    Defults				Restores the settings for the current server to default.
+
+----------------------------------
+-------------Commands-------------
+----------------------------------
+
+      The following commands are used by typing them in the channel specified in the config dialog.
+
+  .apples <n> 				Starts a game of apples. <n> is the number of green gards needed to win the game.
+							<n> is optional, and can be any bumber from 1 to 25. If not used, it defaults to 7
+						
+  .join						Joins the game in progress. Players may join at any time during the game.
+  
+  .appoff 					Ends the current game.
+  
+  .drop <nick>				The player is given an ammount of time(specified in the config file) to say .here
+							before they are removed from the game. If the player drops themself, the drop is instant.
+							If the number of players falls below 3, the game will be aborted.
+
+  .fdrop <nick>				Removes the player from the game instantly. May only be used by Game Mods.
+						
+  .fjoin <nick>				Adds the player to the game. May only be used by Game Mods
+  
+  .fstart					Starts the game if minimum players have joined.
+  
+  .here						Keeps you in the game if someone tries to drops you.
+  
+  .scores	              	Displays the top 10 scores for the current game
+  
+  .wins	<nick>				Displays the number of games won per player on the current server
+  
+  .total 					Shows the total number of <red/green> cards for the current server
+  
+  .players					Shows players in the current game
+  
+  .greens <nick>			Lists the green cards recieved by player if player
+  
+  .notify					Will send a notice to the player whenever a game is about to start.
+  
+  
+     The following commands will only work if "Allow extra cards" was selected in the Config dialog.
+	 
+  .addcard <color> <text> 	Adds a card to the list, but only if it is not already in the game. Color is red or 
+							green. If specified, only Game Mods may be allowed to use this command. 
+  
+  .remcard <color> <text>   Removes a card added to the game. This command cannot be used to remove cards that are
+							part of the core card lists. Only mods can use this command.
+
+							
+----------------------------------
+--------------About---------------
+----------------------------------
+Written by Michael Caffray (SmilinBob)
+
+If you have any questions, comments or suggestions, feel free to email me at: SmilinBob@gmail.com
+
+This was written over about a year. I have put a lot of time and effort in to this project. Feel free to 
+redistribute, but please include this file, and give credit where credit is due.

@@ -1,0 +1,15 @@
+4.apples <N> Starts a game with winning score <N>(max: 25), default is 7
+4.join Joins a game in progress, may be used at anytime
+4.appoff Ends the current game.
+4.drop <player> Drops a player from the game if they are no longer playing, if you drop yourself, it will be instant
+4.here Keeps you in the game if someone drops you wrongly
+4.scores Displays the scores for the current game
+4.wins Displays the number of games won per player on the current server
+4.total <color> Shows the total number of <red/green> cards for the current server
+4.players Shows current players
+4.bugs Shows a list of known bugs, or reports a bug
+4.greens <player> Lists the green cards owned by that player, or yourself if player is not specified
+4.notify Toggle. If on, it will notify you whenever a game is about to start
+4.addcard <color> <text> Adds a card to the list, <color> must be "red" or "green" cards are added for the current server only
+4.remcard <color> <text> Removes a card. Can only remove cards from the additional cards lists, not the core lists
+4.dropnow <nick> Removes the player from the game instantly.

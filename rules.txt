@@ -1,0 +1,1 @@
+Gameplay: Every player will be dealt 7 4red cards. A 3green card will be announced at the beginning of each round. Each player(except the judge) submits a 4red card that they believe best fits that 3green card. The judge then chooses their favorite 4red card. Whoever played that card wins a point for the round.

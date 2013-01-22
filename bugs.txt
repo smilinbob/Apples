@@ -1,0 +1,5 @@
+Known issues:
+-Dropping players messes with judge selection and card submission.(should be fixed in latest version)
+-Cards that start with a number mess with coloration
+-In allvote mode, non-players can vote, blocking players from voting.
+If you find a bug, please report it with this command being as descriptive as possible. -Bob
